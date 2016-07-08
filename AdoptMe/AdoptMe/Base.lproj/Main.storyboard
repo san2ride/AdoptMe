@@ -114,6 +114,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="AdoptMe" image="Adopt" id="Tdg-LS-H05"/>
+                    <connections>
+                        <outlet property="adoptView" destination="D5A-nU-SJJ" id="RJ8-V9-7r5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2U-z7-Jq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

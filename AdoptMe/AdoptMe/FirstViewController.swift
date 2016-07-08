@@ -12,7 +12,7 @@ class FirstViewController: UIViewController, CardStackDelegate {
     
     @IBOutlet weak var cardStackView: CardStack!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,13 +22,16 @@ class FirstViewController: UIViewController, CardStackDelegate {
 
     }
     
+    func cardInterested(dog: Dog) {
+        DataStore.sharedInstance.addFavDogs(dog)
+        print("interested")
+    }
+
+    
     func cardNotInterested(dog: Dog) {
         print("not interested")
     }
     
-    func cardInterested(dog: Dog) {
-        print("interested")
-    }
-
+    
 }
 

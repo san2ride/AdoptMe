@@ -10,27 +10,34 @@ import UIKit
 
 class AdoptTableViewController: UITableViewController {
     
+    @IBOutlet var adoptView: UITableView!
     
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.adoptView.reloadData()
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataStore.sharedInstance.numbersOfDogs()
+        return DataStore.sharedInstance.favNumbersOfDogs()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! DogsTableViewCell
         
-        if let pooch = DataStore.sharedInstance.adoptAtIndex(indexPath.row) {
+        if let pooch = DataStore.sharedInstance.favIndex(indexPath.row) {
             
             
             cell.dogName.text = pooch.name

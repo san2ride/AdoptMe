@@ -13,6 +13,7 @@ class DataStore: NSObject {
     static let sharedInstance = DataStore()
     override private init() {}
     
+    private var favDogArray = [Dog]()
     private var adoptMeArray = [Dog]()
 
     func seedDogs() {
@@ -94,7 +95,22 @@ class DataStore: NSObject {
         return self.adoptMeArray.count 
     }
         
-        
+    func favIndex(index: Int) -> Dog? {
+        if self.favDogArray.count >= 0 && index < self.favDogArray.count {
+            return self.favDogArray[index]
+        }
+        return nil
+    }
+    
+    func addFavDogs(dog: Dog) {
+        self.favDogArray.append(dog)
+    }
+    
+    func favNumbersOfDogs() -> Int {
+        return self.favDogArray.count
+    }
+    
+    
         
 }
 

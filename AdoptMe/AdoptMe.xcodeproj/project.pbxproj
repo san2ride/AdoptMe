@@ -18,6 +18,8 @@
 		A48E01181D2DA6D300720B36 /* AdoptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E01171D2DA6D300720B36 /* AdoptTableViewController.swift */; };
 		A48E011A1D2DACA600720B36 /* DogsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E01191D2DACA600720B36 /* DogsTableViewCell.swift */; };
 		A48E011C1D2E1DB500720B36 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E011B1D2E1DB500720B36 /* MapViewController.swift */; };
+		A4FD3B191D2FFDC400660C0B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD3B181D2FFDC400660C0B /* DataStore.swift */; };
+		A4FD3B1B1D300A1400660C0B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD3B1A1D300A1400660C0B /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		A48E01171D2DA6D300720B36 /* AdoptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdoptTableViewController.swift; sourceTree = "<group>"; };
 		A48E01191D2DACA600720B36 /* DogsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsTableViewCell.swift; sourceTree = "<group>"; };
 		A48E011B1D2E1DB500720B36 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A4FD3B181D2FFDC400660C0B /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		A4FD3B1A1D300A1400660C0B /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				A48E01111D2DA28700720B36 /* Dogs.swift */,
+				A4FD3B181D2FFDC400660C0B /* DataStore.swift */,
 			);
 			name = Modals;
 			path = ..;
@@ -109,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				5ECA25481D2EBFF700F5135F /* CardStack.swift */,
+				A4FD3B1A1D300A1400660C0B /* CollectionViewController.swift */,
 				5ECA25491D2EBFF700F5135F /* CardView.swift */,
 				A48E01191D2DACA600720B36 /* DogsTableViewCell.swift */,
 			);
@@ -191,9 +197,11 @@
 				A48E011C1D2E1DB500720B36 /* MapViewController.swift in Sources */,
 				A48E01181D2DA6D300720B36 /* AdoptTableViewController.swift in Sources */,
 				A48E011A1D2DACA600720B36 /* DogsTableViewCell.swift in Sources */,
+				A4FD3B1B1D300A1400660C0B /* CollectionViewController.swift in Sources */,
 				A48E01121D2DA28700720B36 /* Dogs.swift in Sources */,
 				A48E01001D2DA20D00720B36 /* FirstViewController.swift in Sources */,
 				5ECA254B1D2EBFF700F5135F /* CardView.swift in Sources */,
+				A4FD3B191D2FFDC400660C0B /* DataStore.swift in Sources */,
 				5ECA254A1D2EBFF700F5135F /* CardStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

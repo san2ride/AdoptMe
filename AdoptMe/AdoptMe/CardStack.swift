@@ -15,6 +15,8 @@ protocol CardStackDelegate : class {
 
 class CardStack : UIView {
     
+    
+    
     var cards: [CardView] = []
     weak var delegate : CardStackDelegate?
     
@@ -91,9 +93,9 @@ class CardStack : UIView {
         
         let Lucy = Dog(name: "Lucy", breed: "Crossbreed", imageName: "d20Lucy", age: "Young", size: "Large", gender: "Female")
         self.addDog(Lucy)
-
         
     }
+
     
     func addDog(dog: Dog) {
         

@@ -131,9 +131,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wuU-4Y-LjY">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
-                            </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2be-Qe-DEf">
                                 <rect key="frame" x="0.0" y="20" width="600" height="47"/>
                                 <constraints>
@@ -150,12 +147,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wuU-4Y-LjY" firstAttribute="leading" secondItem="daT-OT-jX2" secondAttribute="leading" id="145-mF-Nhs"/>
-                            <constraint firstItem="9Ba-lW-Sen" firstAttribute="top" secondItem="wuU-4Y-LjY" secondAttribute="bottom" id="1Pa-d6-Ev1"/>
                             <constraint firstItem="2be-Qe-DEf" firstAttribute="top" secondItem="Ncf-MA-eaT" secondAttribute="bottom" id="Fpz-q4-cXZ"/>
                             <constraint firstItem="2be-Qe-DEf" firstAttribute="leading" secondItem="daT-OT-jX2" secondAttribute="leading" id="Rg0-CB-FE2"/>
-                            <constraint firstAttribute="trailing" secondItem="wuU-4Y-LjY" secondAttribute="trailing" id="cd1-SH-3WP"/>
-                            <constraint firstItem="wuU-4Y-LjY" firstAttribute="top" secondItem="Ncf-MA-eaT" secondAttribute="bottom" id="uaY-g1-8aA"/>
                             <constraint firstAttribute="trailing" secondItem="2be-Qe-DEf" secondAttribute="trailing" id="wNj-H5-59M"/>
                         </constraints>
                     </view>
@@ -164,6 +157,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fuo-Em-BLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="715" y="1128"/>
+        </scene>
+        <!--Collection-->
+        <scene sceneID="QqJ-ZY-mqa">
+            <objects>
+                <collectionViewController id="a9j-li-Yt8" customClass="CollectionViewController" customModule="AdoptMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eiN-p3-owK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CtL-7c-hMb">
+                            <size key="itemSize" width="158" height="167"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell2" id="MIb-db-pda" customClass="PoochCollectionViewCell" customModule="AdoptMe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="158" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="158" height="167"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oad-sM-fJU">
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="167"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oad-sM-fJU" secondAttribute="bottom" id="0VL-Of-dUx"/>
+                                    <constraint firstItem="oad-sM-fJU" firstAttribute="top" secondItem="MIb-db-pda" secondAttribute="top" id="Mzc-hg-rj1"/>
+                                    <constraint firstItem="oad-sM-fJU" firstAttribute="leading" secondItem="MIb-db-pda" secondAttribute="leading" id="jiM-F1-Bgk"/>
+                                    <constraint firstAttribute="trailing" secondItem="oad-sM-fJU" secondAttribute="trailing" id="wh7-Qa-uwf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="collectionView" destination="oad-sM-fJU" id="g6L-kM-hlD"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="a9j-li-Yt8" id="IpC-rF-7fl"/>
+                            <outlet property="delegate" destination="a9j-li-Yt8" id="bOg-y6-BCB"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Collection" image="first" id="Oct-jx-UXH"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhJ-ai-PWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="715" y="1829"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -179,6 +221,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="tEw-Z4-7BI" kind="relationship" relationship="viewControllers" id="cYm-eB-z0s"/>
                         <segue destination="Rb1-2m-XMD" kind="relationship" relationship="viewControllers" id="ClF-d3-O8L"/>
+                        <segue destination="a9j-li-Yt8" kind="relationship" relationship="viewControllers" id="mTK-bQ-4li"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -192,6 +235,7 @@
         <image name="Nuzzles-Logo-Blue" width="230" height="229"/>
         <image name="Nuzzles-Logo-Small copy" width="31" height="31"/>
         <image name="PETSMART-logo" width="31" height="8"/>
+        <image name="first" width="30" height="30"/>
         <image name="map" width="24" height="24"/>
         <image name="park" width="24" height="24"/>
     </resources>

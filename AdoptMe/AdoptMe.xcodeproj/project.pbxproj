@@ -20,6 +20,7 @@
 		A48E011C1D2E1DB500720B36 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E011B1D2E1DB500720B36 /* MapViewController.swift */; };
 		A4FD3B191D2FFDC400660C0B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD3B181D2FFDC400660C0B /* DataStore.swift */; };
 		A4FD3B1B1D300A1400660C0B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD3B1A1D300A1400660C0B /* CollectionViewController.swift */; };
+		A4FD3B431D3013FA00660C0B /* PoochCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD3B421D3013FA00660C0B /* PoochCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A48E011B1D2E1DB500720B36 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A4FD3B181D2FFDC400660C0B /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		A4FD3B1A1D300A1400660C0B /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		A4FD3B421D3013FA00660C0B /* PoochCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoochCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		A48E00FC1D2DA20D00720B36 /* AdoptMe */ = {
 			isa = PBXGroup;
 			children = (
+				A48E00FD1D2DA20D00720B36 /* AppDelegate.swift */,
 				A48E01151D2DA2B500720B36 /* Modals */,
 				A48E01161D2DA2C500720B36 /* Views */,
 				A48E01131D2DA29300720B36 /* Controllers */,
@@ -82,6 +85,7 @@
 		A48E01131D2DA29300720B36 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A4FD3B1A1D300A1400660C0B /* CollectionViewController.swift */,
 				A48E00FF1D2DA20D00720B36 /* FirstViewController.swift */,
 				A48E01171D2DA6D300720B36 /* AdoptTableViewController.swift */,
 				A48E011B1D2E1DB500720B36 /* MapViewController.swift */,
@@ -92,7 +96,6 @@
 		A48E01141D2DA2A700720B36 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A48E00FD1D2DA20D00720B36 /* AppDelegate.swift */,
 				A48E01061D2DA20D00720B36 /* Assets.xcassets */,
 				A48E01081D2DA20D00720B36 /* LaunchScreen.storyboard */,
 				A48E010B1D2DA20D00720B36 /* Info.plist */,
@@ -114,9 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				5ECA25481D2EBFF700F5135F /* CardStack.swift */,
-				A4FD3B1A1D300A1400660C0B /* CollectionViewController.swift */,
 				5ECA25491D2EBFF700F5135F /* CardView.swift */,
 				A48E01191D2DACA600720B36 /* DogsTableViewCell.swift */,
+				A4FD3B421D3013FA00660C0B /* PoochCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				A48E01121D2DA28700720B36 /* Dogs.swift in Sources */,
 				A48E01001D2DA20D00720B36 /* FirstViewController.swift in Sources */,
 				5ECA254B1D2EBFF700F5135F /* CardView.swift in Sources */,
+				A4FD3B431D3013FA00660C0B /* PoochCollectionViewCell.swift in Sources */,
 				A4FD3B191D2FFDC400660C0B /* DataStore.swift in Sources */,
 				5ECA254A1D2EBFF700F5135F /* CardStack.swift in Sources */,
 			);

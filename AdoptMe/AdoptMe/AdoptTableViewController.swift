@@ -45,11 +45,7 @@ class AdoptTableViewController: UITableViewController {
             cell.dogImage.image = UIImage(named: pooch.imageName)
             
         }
-        
-        
-        
         return cell
-        
     }
     
     

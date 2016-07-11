@@ -55,11 +55,11 @@ class CardView: UIView {
         NSLayoutConstraint(item: ageLabel, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1, constant: -7).active = true
         NSLayoutConstraint(item: ageLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0).active = true
         
-        nameLabel.font = UIFont(name: "Copperplate", size: 18)
+        nameLabel.font = UIFont(name: "Copperplate", size: 32)
         nameLabel.textColor = UIColor.blackColor()
         nameLabel.textAlignment = .Left
 
-        ageLabel.font = UIFont(name: "Copperplate", size: 18)
+        ageLabel.font = UIFont(name: "Copperplate", size: 32)
         ageLabel.textColor = UIColor.blackColor()
         ageLabel.textAlignment = .Right
         

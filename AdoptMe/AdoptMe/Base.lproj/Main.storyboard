@@ -151,18 +151,35 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="oUc-dg-UDB"/>
                                     <barButtonItem image="park" id="bPx-pV-ZPB"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gRT-pQ-FB8"/>
-                                    <barButtonItem image="Nuzzles-Logo-Small copy" id="W6s-iK-OHU"/>
+                                    <barButtonItem image="Nuzzles-Logo-Small copy" id="W6s-iK-OHU">
+                                        <connections>
+                                            <action selector="nuzzleButton:" destination="Rb1-2m-XMD" id="Ujd-W6-Kcf"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KQu-FH-tsi">
+                                <rect key="frame" x="0.0" y="67" width="600" height="484"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Rb1-2m-XMD" id="nux-LJ-Ib4"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2be-Qe-DEf" firstAttribute="top" secondItem="Ncf-MA-eaT" secondAttribute="bottom" id="Fpz-q4-cXZ"/>
+                            <constraint firstItem="KQu-FH-tsi" firstAttribute="top" secondItem="2be-Qe-DEf" secondAttribute="bottom" id="H7H-Na-75p"/>
+                            <constraint firstItem="KQu-FH-tsi" firstAttribute="leading" secondItem="daT-OT-jX2" secondAttribute="leading" id="Ixv-O5-ucE"/>
                             <constraint firstItem="2be-Qe-DEf" firstAttribute="leading" secondItem="daT-OT-jX2" secondAttribute="leading" id="Rg0-CB-FE2"/>
+                            <constraint firstItem="9Ba-lW-Sen" firstAttribute="top" secondItem="KQu-FH-tsi" secondAttribute="bottom" id="i91-32-1zs"/>
+                            <constraint firstAttribute="trailing" secondItem="KQu-FH-tsi" secondAttribute="trailing" id="sXj-T9-kim"/>
                             <constraint firstAttribute="trailing" secondItem="2be-Qe-DEf" secondAttribute="trailing" id="wNj-H5-59M"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="map" id="Ura-k4-SCJ"/>
+                    <connections>
+                        <outlet property="locoView" destination="KQu-FH-tsi" id="1Ka-8l-bWK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fuo-Em-BLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

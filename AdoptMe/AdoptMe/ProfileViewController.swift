@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
         if let dawg = self.theDogs {
             self.nameLabel?.text = dawg.name
             self.profileView?.image = UIImage(named: dawg.imageName)
-            
+            self.profileText?.text = dawg.profile
             
         }
     }

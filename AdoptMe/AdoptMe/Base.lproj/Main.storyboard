@@ -145,60 +145,65 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nuzzles-Logo-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="Tnl-WX-vgh">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCf-oD-hwS">
-                                <rect key="frame" x="20" y="451" width="270" height="60"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-3G-697">
+                                <rect key="frame" x="311" y="104" width="269" height="307"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="v08-JQ-0Pb"/>
+                                    <constraint firstAttribute="width" constant="270" id="RyA-wN-siU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
+                                <string key="text">Audi is an 8-month-old Lab mix. She is mostly black with some white accents, and her coat is a bit wiry. She is all puppy all the the time. She will be a great hiking or running buddy and would love space to live and a family to adore. Audi won’t last long so come and adopt her today!</string>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RyA-wN-siU"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Wa-rP-ynU">
+                                <rect key="frame" x="20" y="104" width="270" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Dlq-0Y-aof"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCf-oD-hwS">
+                                <rect key="frame" x="20" y="317" width="270" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="M7F-bp-u7h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="42"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-3G-697">
-                                <rect key="frame" x="311" y="104" width="269" height="405"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="405" id="C7I-MZ-ecD"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Wa-rP-ynU">
-                                <rect key="frame" x="20" y="104" width="270" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="VuH-MH-X0x"/>
-                                    <constraint firstAttribute="height" constant="320" id="puC-ga-Ics"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wxa-3G-697" secondAttribute="trailing" constant="20" id="3nu-2X-i7I"/>
-                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="top" secondItem="aee-8J-hKU" secondAttribute="bottom" constant="40" id="91a-7c-wFC"/>
-                            <constraint firstItem="Wxa-3G-697" firstAttribute="leading" secondItem="UCf-oD-hwS" secondAttribute="trailing" constant="19" id="AYH-tm-G5e"/>
-                            <constraint firstItem="Tnl-WX-vgh" firstAttribute="leading" secondItem="qV5-6B-H9M" secondAttribute="leading" id="CO1-Z2-SR5"/>
-                            <constraint firstItem="Wxa-3G-697" firstAttribute="leading" secondItem="3Wa-rP-ynU" secondAttribute="trailing" constant="21" id="F4J-Ul-qmh"/>
-                            <constraint firstItem="Wxa-3G-697" firstAttribute="leading" secondItem="3Wa-rP-ynU" secondAttribute="trailing" constant="21" id="KKj-bI-xOG"/>
-                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="trailing" secondItem="UCf-oD-hwS" secondAttribute="trailing" id="Kjq-73-z7G"/>
-                            <constraint firstItem="UCf-oD-hwS" firstAttribute="width" secondItem="Wxa-3G-697" secondAttribute="width" id="Kmf-RN-Sh1"/>
-                            <constraint firstItem="Wxa-3G-697" firstAttribute="top" secondItem="aee-8J-hKU" secondAttribute="bottom" constant="40" id="P30-yq-fz3"/>
-                            <constraint firstAttribute="trailing" secondItem="Tnl-WX-vgh" secondAttribute="trailing" id="YCX-tR-ikp"/>
-                            <constraint firstItem="Wxa-3G-697" firstAttribute="width" secondItem="3Wa-rP-ynU" secondAttribute="width" id="aRy-Q3-1T3"/>
-                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="leading" secondItem="qV5-6B-H9M" secondAttribute="leading" constant="20" id="hje-AL-SgM"/>
-                            <constraint firstItem="Tnl-WX-vgh" firstAttribute="top" secondItem="aee-8J-hKU" secondAttribute="bottom" id="kFB-SW-siJ"/>
-                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="leading" secondItem="UCf-oD-hwS" secondAttribute="leading" id="och-zf-uY0"/>
-                            <constraint firstItem="UCf-oD-hwS" firstAttribute="leading" secondItem="qV5-6B-H9M" secondAttribute="leading" constant="20" id="qBz-8p-0lI"/>
-                            <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="UCf-oD-hwS" secondAttribute="bottom" constant="40" id="wz6-w6-bcy"/>
-                            <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="Tnl-WX-vgh" secondAttribute="bottom" id="yjo-kO-Zoh"/>
+                            <constraint firstAttribute="trailing" secondItem="Wxa-3G-697" secondAttribute="trailing" constant="20" id="4X9-yI-3DS"/>
+                            <constraint firstAttribute="trailing" secondItem="Tnl-WX-vgh" secondAttribute="trailing" id="8Ky-SQ-TLX"/>
+                            <constraint firstItem="Tnl-WX-vgh" firstAttribute="leading" secondItem="qV5-6B-H9M" secondAttribute="leading" id="Bdh-ff-y2h"/>
+                            <constraint firstItem="Wxa-3G-697" firstAttribute="trailing" secondItem="qV5-6B-H9M" secondAttribute="trailingMargin" id="DY1-2Y-tZD"/>
+                            <constraint firstItem="UCf-oD-hwS" firstAttribute="width" secondItem="Wxa-3G-697" secondAttribute="width" id="QES-rO-Qr1"/>
+                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="top" secondItem="aee-8J-hKU" secondAttribute="bottom" constant="40" id="VgZ-14-Obd"/>
+                            <constraint firstItem="Wxa-3G-697" firstAttribute="leading" secondItem="UCf-oD-hwS" secondAttribute="trailing" constant="21" id="WgH-SC-15s"/>
+                            <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="Tnl-WX-vgh" secondAttribute="bottom" id="X16-sA-jCI"/>
+                            <constraint firstItem="UCf-oD-hwS" firstAttribute="leading" secondItem="qV5-6B-H9M" secondAttribute="leading" constant="20" id="bAQ-PB-Sp0"/>
+                            <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="UCf-oD-hwS" secondAttribute="bottom" constant="174" id="ios-XV-kQ8"/>
+                            <constraint firstItem="Wxa-3G-697" firstAttribute="leading" secondItem="3Wa-rP-ynU" secondAttribute="trailing" constant="21" id="ntb-xY-Tm2"/>
+                            <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="Wxa-3G-697" secondAttribute="bottom" constant="140" id="nxj-9U-Npn"/>
+                            <constraint firstItem="Tnl-WX-vgh" firstAttribute="top" secondItem="aee-8J-hKU" secondAttribute="bottom" id="o6W-4j-N1D"/>
+                            <constraint firstItem="Wxa-3G-697" firstAttribute="top" secondItem="aee-8J-hKU" secondAttribute="bottom" constant="40" id="pRU-UX-YEI"/>
+                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="width" secondItem="Wxa-3G-697" secondAttribute="width" id="sBh-9W-94K"/>
+                            <constraint firstItem="UCf-oD-hwS" firstAttribute="top" secondItem="3Wa-rP-ynU" secondAttribute="bottom" constant="33" id="wSb-mV-9qu"/>
+                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="trailing" secondItem="UCf-oD-hwS" secondAttribute="trailing" id="x0W-ON-ZS8"/>
+                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="leading" secondItem="UCf-oD-hwS" secondAttribute="leading" id="yUx-dq-VZc"/>
+                            <constraint firstItem="3Wa-rP-ynU" firstAttribute="leading" secondItem="qV5-6B-H9M" secondAttribute="leading" constant="20" id="zEE-kX-yF9"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="AYH-tm-G5e"/>
-                                <exclude reference="F4J-Ul-qmh"/>
-                                <exclude reference="aRy-Q3-1T3"/>
-                                <exclude reference="Kmf-RN-Sh1"/>
-                                <exclude reference="qBz-8p-0lI"/>
+                                <exclude reference="QES-rO-Qr1"/>
+                                <exclude reference="bAQ-PB-Sp0"/>
+                                <exclude reference="4X9-yI-3DS"/>
+                                <exclude reference="WgH-SC-15s"/>
                             </mask>
                         </variation>
                     </view>

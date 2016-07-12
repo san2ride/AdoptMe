@@ -16,11 +16,12 @@ class Dog: NSObject {
     var age: String
     var size: String
     var gender: String
+    var profile: String
     var image : UIImage? {
         return UIImage(named: self.imageName)
     }
     
-    init(name: String, breed: String, imageName: String, age: String, size: String, gender: String) {
+    init(name: String, breed: String, imageName: String, age: String, size: String, gender: String, profile: String) {
         
         self.name = name
         self.breed = breed
@@ -28,6 +29,7 @@ class Dog: NSObject {
         self.age = age
         self.size = size
         self.gender = gender
+        self.profile = profile
     }
     
 

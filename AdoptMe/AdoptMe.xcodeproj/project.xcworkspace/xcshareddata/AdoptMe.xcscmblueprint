@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3FEB581E80937DCCE09317D2A82A8D7CA61F7E1C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4CB04A482AA6009AA019D97A2734A5EFC03CD960" : 0,
+    "3FEB581E80937DCCE09317D2A82A8D7CA61F7E1C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D2007B34-1AE3-4E1D-AA74-979AB0EE72C8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4CB04A482AA6009AA019D97A2734A5EFC03CD960" : "",
+    "3FEB581E80937DCCE09317D2A82A8D7CA61F7E1C" : "AdoptMe2\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AdoptMe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AdoptMe\/AdoptMe.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/san2ride\/AdoptMe2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3FEB581E80937DCCE09317D2A82A8D7CA61F7E1C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/san2ride\/TIY-Assignments.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CB04A482AA6009AA019D97A2734A5EFC03CD960"
+    }
+  ]
+}

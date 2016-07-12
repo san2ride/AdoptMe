@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		5ECA254A1D2EBFF700F5135F /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECA25481D2EBFF700F5135F /* CardStack.swift */; };
 		5ECA254B1D2EBFF700F5135F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECA25491D2EBFF700F5135F /* CardView.swift */; };
+		A42051D61D341508006C3A42 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42051D51D341508006C3A42 /* CustomAnnotation.swift */; };
+		A42051DA1D341AFB006C3A42 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42051D91D341AFB006C3A42 /* MapKit.framework */; };
+		A474DDD11D3560730058D973 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474DDD01D3560730058D973 /* ProfileViewController.swift */; };
 		A48E00FE1D2DA20D00720B36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E00FD1D2DA20D00720B36 /* AppDelegate.swift */; };
 		A48E01001D2DA20D00720B36 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E00FF1D2DA20D00720B36 /* FirstViewController.swift */; };
 		A48E01051D2DA20D00720B36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48E01031D2DA20D00720B36 /* Main.storyboard */; };
 		A48E01071D2DA20D00720B36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48E01061D2DA20D00720B36 /* Assets.xcassets */; };
 		A48E010A1D2DA20D00720B36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48E01081D2DA20D00720B36 /* LaunchScreen.storyboard */; };
-		A48E01121D2DA28700720B36 /* Dogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E01111D2DA28700720B36 /* Dogs.swift */; };
+		A48E01121D2DA28700720B36 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E01111D2DA28700720B36 /* Dog.swift */; };
 		A48E01181D2DA6D300720B36 /* AdoptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E01171D2DA6D300720B36 /* AdoptTableViewController.swift */; };
 		A48E011A1D2DACA600720B36 /* DogsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E01191D2DACA600720B36 /* DogsTableViewCell.swift */; };
 		A48E011C1D2E1DB500720B36 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E011B1D2E1DB500720B36 /* MapViewController.swift */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		5ECA25481D2EBFF700F5135F /* CardStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		5ECA25491D2EBFF700F5135F /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A42051D51D341508006C3A42 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAnnotation.swift; path = AdoptMe/CustomAnnotation.swift; sourceTree = "<group>"; };
+		A42051D91D341AFB006C3A42 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A474DDD01D3560730058D973 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A48E00FA1D2DA20D00720B36 /* AdoptMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdoptMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48E00FD1D2DA20D00720B36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A48E00FF1D2DA20D00720B36 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +39,7 @@
 		A48E01061D2DA20D00720B36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A48E01091D2DA20D00720B36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A48E010B1D2DA20D00720B36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A48E01111D2DA28700720B36 /* Dogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dogs.swift; sourceTree = "<group>"; };
+		A48E01111D2DA28700720B36 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		A48E01171D2DA6D300720B36 /* AdoptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdoptTableViewController.swift; sourceTree = "<group>"; };
 		A48E01191D2DACA600720B36 /* DogsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsTableViewCell.swift; sourceTree = "<group>"; };
 		A48E011B1D2E1DB500720B36 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42051DA1D341AFB006C3A42 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +63,7 @@
 		A48E00F11D2DA20D00720B36 = {
 			isa = PBXGroup;
 			children = (
+				A42051D91D341AFB006C3A42 /* MapKit.framework */,
 				A48E00FC1D2DA20D00720B36 /* AdoptMe */,
 				A48E00FB1D2DA20D00720B36 /* Products */,
 			);
@@ -88,6 +96,7 @@
 				A4FD3B1A1D300A1400660C0B /* CollectionViewController.swift */,
 				A48E00FF1D2DA20D00720B36 /* FirstViewController.swift */,
 				A48E01171D2DA6D300720B36 /* AdoptTableViewController.swift */,
+				A474DDD01D3560730058D973 /* ProfileViewController.swift */,
 				A48E011B1D2E1DB500720B36 /* MapViewController.swift */,
 			);
 			name = Controllers;
@@ -106,8 +115,9 @@
 		A48E01151D2DA2B500720B36 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				A48E01111D2DA28700720B36 /* Dogs.swift */,
+				A48E01111D2DA28700720B36 /* Dog.swift */,
 				A4FD3B181D2FFDC400660C0B /* DataStore.swift */,
+				A42051D51D341508006C3A42 /* CustomAnnotation.swift */,
 			);
 			name = Modals;
 			path = ..;
@@ -157,6 +167,11 @@
 					A48E00F91D2DA20D00720B36 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 6D9CKTK39V;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -201,12 +216,14 @@
 				A48E01181D2DA6D300720B36 /* AdoptTableViewController.swift in Sources */,
 				A48E011A1D2DACA600720B36 /* DogsTableViewCell.swift in Sources */,
 				A4FD3B1B1D300A1400660C0B /* CollectionViewController.swift in Sources */,
-				A48E01121D2DA28700720B36 /* Dogs.swift in Sources */,
+				A48E01121D2DA28700720B36 /* Dog.swift in Sources */,
 				A48E01001D2DA20D00720B36 /* FirstViewController.swift in Sources */,
 				5ECA254B1D2EBFF700F5135F /* CardView.swift in Sources */,
 				A4FD3B431D3013FA00660C0B /* PoochCollectionViewCell.swift in Sources */,
 				A4FD3B191D2FFDC400660C0B /* DataStore.swift in Sources */,
+				A474DDD11D3560730058D973 /* ProfileViewController.swift in Sources */,
 				5ECA254A1D2EBFF700F5135F /* CardStack.swift in Sources */,
+				A42051D61D341508006C3A42 /* CustomAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

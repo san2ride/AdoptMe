@@ -10,112 +10,98 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
-    var locationManager = CLLocationManager()
+//    var locationManager = CLLocationManager()
     
     @IBOutlet weak var locoView: MKMapView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        locationManager.delegate = self
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//        locationManager.requestWhenInUseAuthorization()
+        
+        self.addPin(40.725895, longitude: -111.552574, title: "Nuzzles Co", phone: "435.649.5441")
+        self.addPin(40.732895, longitude: -111.383897, title: "Rescue Ranch", phone: "435.649.5441")
+        
+        let latitude = (40.732895 + 40.730459) / 2
+        let longitude = (-111.551152 + -111.383897) / 2
+        
+        let location = CLLocationCoordinate2D(
+            latitude: latitude,
+            longitude: longitude
+        )
+        
+        
 
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        
-        self.nuzzleButton()
+//        self.nuzzleButton()
+        self.centerMap(location)
         
     }
     
-    @IBAction func nuzzleButton() {
-        
-        let status = CLAuthorizationStatus.AuthorizedWhenInUse
-        
-        if status != .Denied {
-            self.locoView.showsUserLocation = true
-            self.locationManager.requestLocation()
-            
-        }
-        
-    }
+//    @IBAction func nuzzleButton() {
+//        
+//        let status = CLAuthorizationStatus.AuthorizedWhenInUse
+//        
+//        if status != .Denied {
+//            self.locoView.showsUserLocation = true
+//            self.locationManager.requestLocation()
+//            
+//        }
+//        
+//    }
     
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        self.nuzzleButton()
-        
-    }
+//    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+//        self.nuzzleButton()
+//    }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func addPin(latitude: Double, longitude: Double, title: String, phone: String) {
         
-        if locations.count > 0 {
-            let location = locations.first
-            print(location?.coordinate.latitude)
-            print(location?.coordinate.longitude)
-            
-            if let center = location?.coordinate {
-                let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-                self.locoView.setRegion(region, animated: true)
-                self.locoView.showsUserLocation = true
-                
-                self.createAnnotation("Mac", subTitle: "", coordinate: center)
-                print("locoView updated")
-                
-            }
-        }
-        print("location updated")
-    }
-    
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print(error.localizedDescription)
-    }
-    
-    func geoCoder(fullAddressString:String) {
+        let location = CLLocationCoordinate2D(
+            latitude: latitude,
+            longitude: longitude
+        )
         
-        let geoCoder = CLGeocoder()
-        
-        geoCoder.geocodeAddressString(fullAddressString, completionHandler: { placemarks, error in
-            
-            })
-        
-    }
-    
-    func  createAnnotation(title: String, subTitle: String, coordinate: CLLocationCoordinate2D) {
         let annotation = MKPointAnnotation()
-        annotation.title = title
-        annotation.subtitle = subTitle
-        annotation.coordinate = coordinate
         
-        if self.locoView != nil {
-            self.locoView.addAnnotation(annotation)
-        }
+        annotation.coordinate = location
+        annotation.title = title
+        annotation.subtitle = phone
+        
+        self.locoView.addAnnotation(annotation)
+    }
+    
+    func centerMap(centerCoordinate: CLLocationCoordinate2D) {
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        
+        let region = MKCoordinateRegion(center: centerCoordinate, span: span)
+        
+        self.locoView.setRegion(region, animated: true)
     }
     
     func  locoView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
-        let identifier = "MyPinIdentifier"
-        
-        if annotation.isKindOfClass(MKUserLocation) {
-            return nil
+        if annotation.isKindOfClass(CustomPointAnnotation) {
+            
+            let identifier = "MapPin"
+            
+            let annotationView = MKAnnotationView(annotation: annotation,reuseIdentifier: identifier)
+            
+            annotationView.canShowCallout = true
+            
+            let imageView = UIImageView(frame: CGRectMake(0, 0, 44, 44))
+            imageView.image = UIImage(named: "map")
+            
+            annotationView.image = imageView.image
+            
+            return annotationView
+
         }
-        
-        var annotationView:MKPinAnnotationView? = locoView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView
-        
-        if annotationView == nil {
-            
-            annotationView?.pinTintColor = UIColor.orangeColor()
-            
-            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            
-            annotationView?.canShowCallout = true
-            
-            let leftIconView = UIImageView(frame: CGRectMake(0, 0, 32, 30))
-            leftIconView.image = UIImage(named: "mac")
-            annotationView?.leftCalloutAccessoryView = leftIconView
-            
-            
-        }
-        return annotationView
+        return nil
     }
     
 

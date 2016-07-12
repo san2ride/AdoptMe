@@ -10,6 +10,8 @@ import UIKit
 
 class AdoptTableViewController: UITableViewController {
     
+    var currentDog: Dog?
+    
     @IBOutlet var adoptView: UITableView!
     
    
@@ -48,5 +50,20 @@ class AdoptTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.currentDog = DataStore.sharedInstance.favIndex(indexPath.row)
+        
+        self.performSegueWithIdentifier("ProfileSegue", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let controller = segue.destinationViewController as? ProfileViewController
+        
+        controller?.theDogs = self.currentDog
+        
+        
+    }
     
 }

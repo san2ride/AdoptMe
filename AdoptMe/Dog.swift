@@ -16,7 +16,6 @@ class Dog: NSObject {
     var age: String
     var size: String
     var gender: String
-    
     var image : UIImage? {
         return UIImage(named: self.imageName)
     }

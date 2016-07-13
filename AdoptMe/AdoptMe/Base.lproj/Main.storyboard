@@ -120,7 +120,9 @@
                             <outlet property="delegate" destination="tEw-Z4-7BI" id="8jg-hQ-iZ1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="D9M-hI-ule"/>
+                    <navigationItem key="navigationItem" id="D9M-hI-ule">
+                        <barButtonItem key="backBarButtonItem" title="Favs" id="fDg-eq-EZV"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="adoptView" destination="D5A-nU-SJJ" id="RJ8-V9-7r5"/>
                         <segue destination="j7G-aK-MzU" kind="show" identifier="ProfileSegue" id="Vo9-cb-xtU"/>
@@ -146,13 +148,13 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-3G-697">
-                                <rect key="frame" x="311" y="104" width="269" height="307"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="311" y="104" width="269" height="275"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="RyA-wN-siU"/>
                                 </constraints>
                                 <string key="text">Audi is an 8-month-old Lab mix. She is mostly black with some white accents, and her coat is a bit wiry. She is all puppy all the the time. She will be a great hiking or running buddy and would love space to live and a family to adore. Audi won’t last long so come and adopt her today!</string>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -188,8 +190,8 @@
                             <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="Tnl-WX-vgh" secondAttribute="bottom" id="X16-sA-jCI"/>
                             <constraint firstItem="UCf-oD-hwS" firstAttribute="leading" secondItem="qV5-6B-H9M" secondAttribute="leading" constant="20" id="bAQ-PB-Sp0"/>
                             <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="UCf-oD-hwS" secondAttribute="bottom" constant="174" id="ios-XV-kQ8"/>
+                            <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="Wxa-3G-697" secondAttribute="bottom" constant="172" id="mga-um-yvd"/>
                             <constraint firstItem="Wxa-3G-697" firstAttribute="leading" secondItem="3Wa-rP-ynU" secondAttribute="trailing" constant="21" id="ntb-xY-Tm2"/>
-                            <constraint firstItem="eIr-D8-hTV" firstAttribute="top" secondItem="Wxa-3G-697" secondAttribute="bottom" constant="140" id="nxj-9U-Npn"/>
                             <constraint firstItem="Tnl-WX-vgh" firstAttribute="top" secondItem="aee-8J-hKU" secondAttribute="bottom" id="o6W-4j-N1D"/>
                             <constraint firstItem="Wxa-3G-697" firstAttribute="top" secondItem="aee-8J-hKU" secondAttribute="bottom" constant="40" id="pRU-UX-YEI"/>
                             <constraint firstItem="3Wa-rP-ynU" firstAttribute="width" secondItem="Wxa-3G-697" secondAttribute="width" id="sBh-9W-94K"/>
@@ -280,43 +282,55 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eiN-p3-owK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CtL-7c-hMb">
-                            <size key="itemSize" width="158" height="167"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="scrollIndicatorInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="CtL-7c-hMb">
+                            <size key="itemSize" width="180" height="180"/>
+                            <size key="headerReferenceSize" width="15" height="15"/>
+                            <size key="footerReferenceSize" width="5" height="5"/>
+                            <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell2" id="MIb-db-pda" customClass="PoochCollectionViewCell" customModule="AdoptMe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="158" height="167"/>
+                                <rect key="frame" x="4" y="19" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="158" height="167"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oad-sM-fJU">
-                                            <rect key="frame" x="0.0" y="0.0" width="158" height="167"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="175" id="KAM-Cf-uw5"/>
+                                                <constraint firstAttribute="height" constant="175" id="bum-FZ-BgW"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="oad-sM-fJU" secondAttribute="bottom" id="0VL-Of-dUx"/>
-                                    <constraint firstItem="oad-sM-fJU" firstAttribute="top" secondItem="MIb-db-pda" secondAttribute="top" id="Mzc-hg-rj1"/>
-                                    <constraint firstItem="oad-sM-fJU" firstAttribute="leading" secondItem="MIb-db-pda" secondAttribute="leading" id="jiM-F1-Bgk"/>
-                                    <constraint firstAttribute="trailing" secondItem="oad-sM-fJU" secondAttribute="trailing" id="wh7-Qa-uwf"/>
+                                    <constraint firstItem="oad-sM-fJU" firstAttribute="leading" secondItem="MIb-db-pda" secondAttribute="leading" id="WIh-aQ-KZp"/>
+                                    <constraint firstItem="oad-sM-fJU" firstAttribute="top" secondItem="MIb-db-pda" secondAttribute="top" id="gV5-OK-8WQ"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="collectionView" destination="oad-sM-fJU" id="g6L-kM-hlD"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BEm-Xl-A8d">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Pg5-xr-S80">
+                            <rect key="frame" x="0.0" y="203" width="600" height="5"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="a9j-li-Yt8" id="IpC-rF-7fl"/>
                             <outlet property="delegate" destination="a9j-li-Yt8" id="bOg-y6-BCB"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Collection" image="first" id="Oct-jx-UXH"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="Nuzzles-Logo-Small copy" id="Oct-jx-UXH"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhJ-ai-PWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -369,7 +383,6 @@
         <image name="Nuzzles-Logo-Blue" width="153" height="152"/>
         <image name="Nuzzles-Logo-Small copy" width="31" height="31"/>
         <image name="PETSMART-logo" width="31" height="8"/>
-        <image name="first" width="30" height="30"/>
         <image name="map" width="24" height="24"/>
         <image name="park" width="24" height="24"/>
     </resources>
